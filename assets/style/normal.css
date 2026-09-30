@@ -20,7 +20,7 @@
 }
 
 :root {
-  --background: #0e0e0e;
+  --background: #0e1016;
   --text: white;
 }
 
@@ -30,7 +30,11 @@ body {
 }
 
 body:has(#dark:checked) {
-  --background: #000020;
+  --background: #240303;
+}
+
+body:has(#dark:checked) .test2 {
+  content: url("test2dark.jpg");
 }
 
 .theme-buttons {
@@ -103,11 +107,13 @@ body {
 }
 
 ul {
+  position: relative;
   justify-content: center;
   margin-top: 5vw;
   font-size: calc(12px + 2.3vw);
   list-style-image: url("pijl.png");
   color: aliceblue;
+  z-index: 2;
 }
 
 .test {
