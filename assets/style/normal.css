@@ -20,7 +20,7 @@
 }
 
 :root {
-  --background: #444447;
+  --background: #0e0e0e;
   --text: white;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 body:has(#dark:checked) {
-  --background: #08083a;
+  --background: #000020;
 }
 
 .theme-buttons {
@@ -55,7 +55,7 @@ label[for="dark"] {
 
 label[for="light"]:hover,
 label[for="dark"]:hover {
-  transform: scale(1.1);
+  animation: glitch 0.25s infinite;
 }
 
 h1 {
@@ -64,7 +64,7 @@ h1 {
   font-size: calc(12px + 5.5vw);
   color: #cca01d;
   text-transform: uppercase;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.2vw;
 
   -webkit-text-stroke: 0.2vw #000000;
 
@@ -92,16 +92,21 @@ body {
     max-width: 100%;
     max-height: 100%;
     aspect-ratio: 1 / 1;
-    background-color: rgb(201, 33, 33);
     border: 0.625rem solid #e2ad0d;
   }
+}
+
+.test2 {
+  position: absolute;
+  max-width: 80vw;
+  z-index: 0;
 }
 
 ul {
   justify-content: center;
   margin-top: 5vw;
   font-size: calc(12px + 2.3vw);
-  list-style-type: disc;
+  list-style-image: url("pijl.png");
   color: aliceblue;
 }
 
@@ -117,4 +122,34 @@ a:link {
   font-family: Goldman;
   color: #ffffff;
   text-decoration: none;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+nav a:hover {
+  animation: glitch 0.25s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  33% {
+    transform: translate(-1px, 0.5px);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  66% {
+    transform: translate(1px, -0.5px);
+  }
+
+  100% {
+    transform: translate(-0.5px, -1px);
+    color: rgba(255, 255, 255, 0.9);
+  }
 }
