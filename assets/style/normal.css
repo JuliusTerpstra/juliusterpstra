@@ -19,9 +19,57 @@
   display: none;
 }
 
+#cookie-close {
+  display: none;
+}
+
+#cookie-close:checked + .cookie-popup {
+  display: none;
+}
+
+.cookie-popup {
+  position: fixed;
+  bottom: 1vw;
+  left: 50%;
+  transform: translateX(-50%);
+
+  aspect-ratio: 16 / 9;
+  padding: 2vw;
+  width: 20vw;
+  min-width: 300px;
+
+  background-image: url("cookies.png");
+  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 100;
+}
+
+.cookie-popup label {
+  display: inline-block;
+  padding: 10px;
+
+  margin-top: 150px;
+  margin-left: 2.5vw;
+  font-size: 16px;
+
+  background-color: #fdfdfd;
+  border: 2px solid #3e3e3e;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cookie-popup label:hover {
+  background-color: #b2b2b2;
+}
+
 :root {
-  --background: #0e1016;
-  --text: white;
+  --background: #08131d;
+  --text: rgb(0, 0, 0);
 }
 
 body {
@@ -30,7 +78,7 @@ body {
 }
 
 body:has(#dark:checked) {
-  --background: #240303;
+  --background: #1d0217;
 }
 
 body:has(#dark:checked) .test2 {
@@ -85,7 +133,7 @@ h1 {
 body {
   margin: auto;
 
-  div {
+  .home {
     display: flex;
     justify-content: center;
     margin-top: 4vw;
@@ -111,9 +159,17 @@ ul {
   justify-content: center;
   margin-top: 5vw;
   font-size: calc(12px + 2.3vw);
-  list-style-image: url("pijl.png");
+  list-style: none;
   color: aliceblue;
   z-index: 2;
+}
+
+li {
+  background-image: url("pijl.png");
+  background-size: 3vw 3vw;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 3.3vw;
 }
 
 .test {
@@ -138,6 +194,34 @@ nav a {
 
 nav a:hover {
   animation: glitch 0.25s infinite;
+}
+
+.grid {
+  padding-top: 5vw;
+  width: 95%;
+  margin: 20px auto;
+
+  display: grid;
+  grid-template-columns: 3fr 1.8fr;
+  gap: 20px;
+}
+
+.box {
+  min-height: 210px;
+  border: 3px solid black;
+  box-sizing: border-box;
+  padding: 20px;
+  background: white;
+}
+.top {
+  text-align: center;
+  font-size: 3vw;
+  grid-column: 1 / -1;
+  min-height: 5vw;
+}
+
+footer {
+  color: #ccc;
 }
 
 @keyframes glitch {
