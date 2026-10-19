@@ -48,12 +48,14 @@
 }
 
 .cookie-popup label {
+  font-family: goldman;
+
   display: inline-block;
-  padding: 10px;
+  padding: 7px;
 
   margin-top: 150px;
-  margin-left: 2.5vw;
-  font-size: 16px;
+  margin-left: 2vw;
+  font-size: 15px;
 
   background-color: #fdfdfd;
   border: 2px solid #3e3e3e;
@@ -64,7 +66,7 @@
 }
 
 .cookie-popup label:hover {
-  background-color: #b2b2b2;
+  background-color: #d9d8d8;
 }
 
 :root {
