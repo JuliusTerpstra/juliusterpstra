@@ -1,4 +1,3 @@
-/* HIER KOMT JOUW CSS */
 @font-face {
   font-family: "Comic Relief";
   src: url(../type/ComicRelief-Regular.woff2);
@@ -166,7 +165,7 @@ ul {
   z-index: 2;
 }
 
-li {
+li a {
   background-image: url("pijl.png");
   background-size: 3vw 3vw;
   background-repeat: no-repeat;
@@ -186,6 +185,10 @@ a:link {
   font-family: Goldman;
   color: #ffffff;
   text-decoration: none;
+}
+
+a:visited {
+  color: #ffffff;
 }
 
 nav a {

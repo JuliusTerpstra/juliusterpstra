@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Goldman";
+  src: url(../type/Goldman/Goldman-Bold.ttf);
+  src: url(../type/Goldman/Goldman-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  border-radius: 10%;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  font-family: Goldman;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1vw 2vw;
+  text-decoration: none;
+  transition: 1s;
+}
+
+ul li a:hover {
+  background-color: #171717;
+}
+
+body {
+  background: #08131d;
+}
+
+p {
+  color: aliceblue;
+}
